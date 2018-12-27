@@ -19,8 +19,10 @@
 
 package org.nuxeo.ecm.media.publishing.upload;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.nuxeo.ecm.core.api.CoreSession;
 import org.nuxeo.ecm.core.api.DocumentModel;
 import org.nuxeo.ecm.core.api.IdRef;
@@ -39,10 +41,6 @@ import org.nuxeo.ecm.media.publishing.MediaPublishingProvider;
 import org.nuxeo.ecm.media.publishing.adapter.PublishableMedia;
 import org.nuxeo.runtime.api.Framework;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Work for asynchronous media upload.
  *
@@ -52,15 +50,17 @@ public class MediaPublishingUploadWork extends AbstractWork {
     public static final String CATEGORY_VIDEO_UPLOAD = "mediaPublishingUpload";
 
     private final String serviceId;
+
     private final MediaPublishingProvider service;
+
     private CoreSession loginSession;
+
     private String account;
+
     private Map<String, String> options;
 
-    private static final Log log = LogFactory.getLog(MediaPublishingUploadWork.class);
-
     public MediaPublishingUploadWork(String serviceId, MediaPublishingProvider service, String repositoryName,
-        String docId, CoreSession loginSession, String account, Map<String, String> options) {
+            String docId, CoreSession loginSession, String account, Map<String, String> options) {
         super(getIdFor(repositoryName, docId, serviceId));
         this.serviceId = serviceId;
         this.service = service;
