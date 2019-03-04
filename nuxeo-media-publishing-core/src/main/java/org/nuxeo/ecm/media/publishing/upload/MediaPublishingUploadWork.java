@@ -101,7 +101,7 @@ public class MediaPublishingUploadWork extends AbstractWork {
 
                     @Override
                     public void onProgress(double progress) {
-                        setProgress(new Progress(new Float(progress)));
+                        setProgress(new Progress(Float.valueOf((float) progress)));
                     }
 
                     @Override
