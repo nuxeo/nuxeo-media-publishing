@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>org.nuxeo.ecm.media.publishing</groupId>
-  <artifactId>nuxeo-media-publishing-parent</artifactId>
+  <artifactId>nuxeo-media-publishing</artifactId>
   <packaging>pom</packaging>
   <name>Nuxeo Media Publishing Parent</name>
 
