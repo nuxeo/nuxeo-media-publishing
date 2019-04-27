@@ -7,10 +7,13 @@
   </parent>
 
   <groupId>org.nuxeo.ecm.media.publishing</groupId>
-  <artifactId>nuxeo-media-publishing</artifactId>
-  <name>Nuxeo Media Publishing Parent</name>
-  <description>Nuxeo Media Publishing Parent</description>
+  <artifactId>nuxeo-media-publishing-parent</artifactId>
   <packaging>pom</packaging>
+  <name>Nuxeo Media Publishing Parent</name>
+
+  <properties>
+    <marketplace.dam.version>6.5.0-SNAPSHOT</marketplace.dam.version>
+  </properties>
 
   <modules>
     <module>nuxeo-media-publishing-core</module>
@@ -19,6 +22,7 @@
     <module>nuxeo-media-publishing-wistia-jsf</module>
     <module>nuxeo-media-publishing-youtube-core</module>
     <module>nuxeo-media-publishing-youtube-jsf</module>
+    <module>nuxeo-media-publishing-package</module>
   </modules>
 
   <dependencyManagement>
@@ -52,6 +56,14 @@
         <groupId>org.nuxeo.ecm.media.publishing</groupId>
         <artifactId>nuxeo-media-publishing-youtube-jsf</artifactId>
         <version>${project.version}</version>
+      </dependency>
+      <!-- external dependencies -->
+      <dependency>
+        <groupId>org.nuxeo.marketplace.dam</groupId>
+        <artifactId>marketplace</artifactId>
+        <classifier>nxr-jsf</classifier>
+        <version>${marketplace.dam.version}</version>
+        <type>zip</type>
       </dependency>
     </dependencies>
   </dependencyManagement>
