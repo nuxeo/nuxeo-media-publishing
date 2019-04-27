@@ -25,6 +25,15 @@
     <module>nuxeo-media-publishing-package</module>
   </modules>
 
+  <profiles>
+    <profile>
+      <id>ftest</id>
+      <modules>
+        <module>ftest/webdriver</module>
+      </modules>
+    </profile>
+  </profiles>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -57,7 +66,19 @@
         <artifactId>nuxeo-media-publishing-youtube-jsf</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.nuxeo.ecm.media.publishing</groupId>
+        <artifactId>nuxeo-media-publishing-package</artifactId>
+        <version>${project.version}</version>
+        <type>zip</type>
+      </dependency>
       <!-- external dependencies -->
+      <dependency>
+        <groupId>org.nuxeo.marketplace.dam</groupId>
+        <artifactId>marketplace</artifactId>
+        <version>${marketplace.dam.version}</version>
+        <type>zip</type>
+      </dependency>
       <dependency>
         <groupId>org.nuxeo.marketplace.dam</groupId>
         <artifactId>marketplace</artifactId>
