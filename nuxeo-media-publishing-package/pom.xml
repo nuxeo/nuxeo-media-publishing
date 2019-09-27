@@ -13,17 +13,6 @@
   <packaging>zip</packaging>
   <name>Nuxeo Media Publishing Marketplace Package</name>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.nuxeo.ecm.distribution</groupId>
-        <artifactId>nuxeo-nxr-jsf-ui</artifactId>
-        <type>zip</type>
-        <version>${project.version}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
   <dependencies>
     <dependency>
       <groupId>org.nuxeo.ecm.distribution</groupId>
@@ -34,13 +23,6 @@
     <dependency>
       <groupId>org.nuxeo.ecm.distribution</groupId>
       <artifactId>nuxeo-nxr-jsf-ui</artifactId>
-      <type>zip</type>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.nuxeo.marketplace.dam</groupId>
-      <artifactId>marketplace</artifactId>
-      <classifier>nxr-jsf</classifier>
       <type>zip</type>
       <scope>provided</scope>
     </dependency>
