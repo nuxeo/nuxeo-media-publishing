@@ -22,7 +22,6 @@
   </platforms>
   <dependencies>
     <package>nuxeo-jsf-ui</package>
-    <package>nuxeo-dam-jsf-ui</package>
   </dependencies>
   <license>LGPL 2.1</license>
   <license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
